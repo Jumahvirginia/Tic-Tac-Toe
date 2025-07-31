@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midnight Luxe Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Butler:wght@300;500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="particles"></div>
+    <main class="game-container">
+        <header class="game-header">
+            <h1 class="game-title">TIC TAC LUXE</h1>
+            <div class="player-display">
+                <div class="player active" data-player="X">
+                    <div class="avatar gem-x"></div>
+                    <span class="player-name">PLAYER X</span>
+                </div>
+                <div class="player" data-player="O">
+                    <div class="avatar gem-o"></div>
+                    <span class="player-name">PLAYER O</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="status">YOUR MOVE, PLAYER X</div>
+
+        <div class="board">
+            <div class="tile" data-index="0"></div>
+            <div class="tile" data-index="1"></div>
+            <div class="tile" data-index="2"></div>
+            <div class="tile" data-index="3"></div>
+            <div class="tile" data-index="4"></div>
+            <div class="tile" data-index="5"></div>
+            <div class="tile" data-index="6"></div>
+            <div class="tile" data-index="7"></div>
+            <div class="tile" data-index="8"></div>
+        </div>
+
+        <div class="controls">
+            <button class="btn-primary reset-btn">NEW GAME</button>
+            <button class="btn-secondary">HISTORY</button>
+        </div>
+    </main>
+
+    <div class="modal-overlay hidden">
+        <div class="modal">
+            <h2 class="modal-title">VICTORY</h2>
+            <p class="modal-message">PLAYER X HAS PREVAILED</p>
+            <div class="modal-actions">
+                <button class="btn-primary modal-btn">PLAY AGAIN</button>
+                <button class="btn-secondary modal-btn">CLOSE</button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="tileSound" src="https://assets.mixkit.co/sfx/preview/mixkit-arcade-game-jump-coin-216.mp3"></audio>
+    <audio id="winSound" src="https://assets.mixkit.co/sfx/preview/mixkit-winning-chimes-2015.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
